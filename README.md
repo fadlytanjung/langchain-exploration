@@ -4,12 +4,18 @@
 
 This project explores LangChain by building a simple chatbot entirely within Jupyter Lab. It demonstrates:
 
-• Installing and configuring LangChain and python-dotenv • Loading environment variables from a `.env` file • Initializing an OpenAI‐backed chat model • Streaming assistant responses interactively in notebook cells
+- Installing and configuring LangChain and python-dotenv
+- Loading environment variables from a `.env` file
+- Initializing an OpenAI‐backed chat model
+- Streaming assistant responses interactively in notebook cells
 
 ## Files
-
-• `README.txt`        ── This file. • `.env`              ── Store your API keys here: OPENAI\_API\_KEY=sk-… • `notebook.ipynb`    ── Jupyter notebook demonstrating setup and interactive chat loop.
-
+```
+/project
+├── README.md        # documentation
+├── main.py          # if wanna running in CLI
+└── notebook.ipynb   # jupyter notebook for project
+```
 ## Setup
 
 1. **Clone or download** this repo.
@@ -21,15 +27,16 @@ This project explores LangChain by building a simple chatbot entirely within Jup
    ```
 3. **Install dependencies**:
    ```bash
-   pip install langchain openai python-dotenv ipywidgets
+   pip install langchain openai python-dotenv ipywidgets jupyterlab
    ```
-4. **Enable ipywidgets** (if not already):
-   ```bash
-   jupyter labextension install @jupyter-widgets/jupyterlab-manager
-   ```
-5. **Create a **`` in project root:
+4. **Create a .env file`` in project root:
    ```dotenv
    OPENAI_API_KEY=sk-your-key-here
+   TRAVILY_API_KEY=<travily-api-key>
+   LANGSMITH_TRACING=true
+   LANGSMITH_ENDPOINT="https://api.smith.langchain.com"
+   LANGSMITH_API_KEY=<langsmith-api-keyL
+   LANGSMITH_PROJECT=<your-project-name>
    ```
 
 ## Running in Jupyter Lab
@@ -38,7 +45,7 @@ This project explores LangChain by building a simple chatbot entirely within Jup
    ```bash
    jupyter lab
    ```
-2. **Open **`` in the Lab interface.
+2. **Open host url`` in the Lab interface.
 3. **Run the setup cell** to load environment variables and initialize the LLM.
 4. **Use the interactive chat cell** to send messages and stream assistant replies.
 
