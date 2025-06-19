@@ -29,7 +29,7 @@ This project explores LangChain by building a simple chatbot entirely within Jup
    ```bash
    pip install langchain openai python-dotenv ipywidgets jupyterlab
    ```
-4. **Create a .env file`` in project root:
+4. **Create a `.env` file in project root**:
    ```dotenv
    OPENAI_API_KEY=sk-your-key-here
    TRAVILY_API_KEY=<travily-api-key>
@@ -45,7 +45,7 @@ This project explores LangChain by building a simple chatbot entirely within Jup
    ```bash
    jupyter lab
    ```
-2. **Open host url`` in the Lab interface.
+2. **Open host url** in the Lab interface
 3. **Run the setup cell** to load environment variables and initialize the LLM.
 4. **Use the interactive chat cell** to send messages and stream assistant replies.
 
